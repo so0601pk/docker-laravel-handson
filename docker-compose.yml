@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  app: # => アプリケーションサーバー名、サービス名は任意
+    build: ./infra/php # docker buildを実行する際の現在の作業ディレクトリのこと
+    volumes: #ホスト側のディレクトリや名前付きボリュームをコンテナ側へマウントしたい時に指定
+      - ./backend:/work
